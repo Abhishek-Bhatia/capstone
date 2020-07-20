@@ -18,7 +18,14 @@
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
-    	<input type="text" name="experience" placeholder="Bank Name" required="required" />
+    	<<label for="Bank Name">Choose a car:</label>
+
+		<select name="Bank" id="cars">
+		  <option value="axis">Axis</option>
+		  <option value="ICICI">ICICI</option>
+		  <option value="RBL">RBL</option>
+		  <option value="Federal Bank">Federal Bank</option>
+		</select>
         
 
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
